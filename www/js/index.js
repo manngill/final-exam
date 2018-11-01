@@ -89,6 +89,7 @@ function showHeroes() {
     )
 }
 
+
 function displayResults( tx, results ){
 
     if(results.rows.length == 0) {
@@ -112,6 +113,34 @@ function displayResults( tx, results ){
         }
 
     }
+
+
+    function rescueMe() {
+
+      console.log("Rescue button pressed!");
+
+      function Results( tx, results ){
+
+          if(results.rows.length == 0) {
+                  alert("No records found");
+                  return false;
+              }
+
+              var row = "";
+              for(var i=0; i<results.rows.length; i++) {
+            document.getElementById("resultsSection").innerHTML +=
+                "<p> Super Hero Rescue Agency: "
+              +   results.rows.item(i).<button id = "rescue"> Rescue Me! </button>
+              + "<br>"
+              + <button id = "insert"> Insert Heroes </button>
+              + < button id = "show"> Show Heroes </button>
+              + "</p>";
+
+              }
+
+          }
+
+
 
 function onReadyTransaction( ){
   console.log( 'Transaction completed' )
